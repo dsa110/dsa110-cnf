@@ -47,12 +47,12 @@ routines:
   - name: dsaX_trigger
     cmd: /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/dsaX_trigger
     args: -c 11 -i 127.0.0.1 -d -j eaea -o fafa 
-#  - name: meridian_fringestop
-#    cmd: /home/ubuntu/anaconda3/envs/casa/bin/python
-#    args: /home/ubuntu/proj/dsa110-shell/dsa110-meridian-fs/dsamfs/meridian_fringestop.py /home/ubuntu/proj/dsa110-shell/dsa110-xengine/scripts/dsa_parameters.yaml /home/ubuntu/data
-  - name: dada_dbnull
-    cmd: dada_dbnull
-    args: -k bada
+  - name: meridian_fringestop
+    cmd: /home/ubuntu/anaconda3/envs/casa/bin/python
+    args: /home/ubuntu/proj/dsa110-shell/dsa110-meridian-fs/dsamfs/meridian_fringestop.py /home/ubuntu/data
+#  - name: dada_dbnull
+#    cmd: dada_dbnull
+#    args: -k bada
   - name: dsaX_dbnic
     cmd: /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/dsaX_dbnic
     args: -i cada -d
