@@ -29,21 +29,21 @@ routines:
     cmd: /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/dsaX_filTrigger
     args: -c 27 -i 127.0.0.1 -n /home/ubuntu/data/fil -j eada -d 
     hostargs:
-      corr17: -n 0
-      corr18: -n 64
-      corr19: -n 128
-      corr20: -n 192
+      corr17: -b 0
+      corr18: -b 64
+      corr19: -b 128
+      corr20: -b 192
+  - name: dsaX_simplesplit
+    cmd: /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/dsaX_simplesplit
+    args: -c 28 -i fada -o eada -j bada -b
   - name: gpu_flagger
     cmd: /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/gpu_flagger
-    args: -i fada -o bada -t 4.5 -v
+    args: -i dada -o fada -t 4.5 -v
     hostargs:
       corr17: -g /home/ubuntu/data/beams_corr17
       corr18: -g /home/ubuntu/data/beams_corr18
       corr19: -g /home/ubuntu/data/beams_corr19
       corr20: -g /home/ubuntu/data/beams_corr20
-  - name: dsaX_simplesplit
-    cmd: /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/dsaX_simplesplit
-    args: -c 28 -i dada -o eada -j fada -b
   - name: dsaX_nicdb
     cmd: /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/dsaX_nicdb
     args: -f /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/spectrometer_header.txt -o dada 
