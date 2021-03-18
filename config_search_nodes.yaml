@@ -25,7 +25,7 @@ routines:
       corr18: -coincidencer 10.41.0.69:12346 -beam 64
       corr19: -coincidencer 10.41.0.69:12347 -beam 128
       corr20: -coincidencer 10.41.0.69:12348 -beam 192
-  - name: dsaX_writeFil
+  - name: dsaX_filTrigger
     cmd: /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/dsaX_filTrigger
     args: -c 27 -i 127.0.0.1 -n /home/ubuntu/data/fil -j eada -d 
     hostargs:
