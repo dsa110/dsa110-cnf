@@ -27,7 +27,7 @@ buffers:
 routines:
   - name: dsaX_writeFil
     cmd: /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/dsaX_writeFil
-    args: -k cada -i 127.0.0.1 -m -s 1024 
+    args: -k cada -i 127.0.0.1 -m
     hostargs:
       corr17: -f /home/ubuntu/data/corr17
       corr18: -f /home/ubuntu/data/corr18
