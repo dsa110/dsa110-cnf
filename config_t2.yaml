@@ -1,0 +1,8 @@
+min_dm: 50.0
+min_dm_dsc: "smallest dm in filtering"
+max_ibox: 33
+max_ibox_dsc: "largest ibox in filtering"
+min_snr: 9.0
+min_snr_dsc: "smallest snr in filtering"
+max_ncl: 10
+max_ncl_dsc: "largest number of clusters allowed in triggering"
