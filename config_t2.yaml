@@ -6,3 +6,5 @@ min_dm: 50.0
 min_dm_dsc: smallest dm in filtering
 min_snr: 9.0
 min_snr_dsc: smallest snr in filtering
+min_snr_t2out: 7.5
+min_snr_t2out_dsc: smallest snr in T2 file output
