@@ -16,15 +16,34 @@ buffers:
     b: 1073741824
     n: 4
     c: 0
+  - k: cada
+    b: 1073741824
+    n: 4
+    c: 0
+  - k: aada
+    b: 1073741824
+    n: 4
+    c: 0
 routines:
+  - name: dsaX_writeFil
+    cmd: /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/dsaX_writeFil
+    args: -k cada -i 127.0.0.1 -m
+    hostargs:
+      corr17: -f /home/ubuntu/data/corr17
+      corr18: -f /home/ubuntu/data/corr18
+      corr19: -f /home/ubuntu/data/corr19
+      corr20: -f /home/ubuntu/data/corr20
   - name: heimdall
     cmd: /home/ubuntu/proj/dsa110-shell/dsa110-mbheimdall/bin/heimdall
-    args: -k bada -gpu_id 0 -nsamps_gulp 16384 -output_dir /home/ubuntu/data -dm 50 1500 -dm_tol 1.5 -max_giant_rate 20000000 -nbeams 64
+    args: -k bada -gpu_id 0 -nsamps_gulp 16384 -output_dir /home/ubuntu/data -dm 10 1100 -dm_tol 1.5 -max_giant_rate 20000000 -nbeams 64
     hostargs:
       corr17: -coincidencer 10.41.0.69:12345 -beam 0
       corr18: -coincidencer 10.41.0.69:12346 -beam 64
       corr19: -coincidencer 10.41.0.69:12347 -beam 128
       corr20: -coincidencer 10.41.0.69:12348 -beam 192
+#  - name: dada_dbnull
+#    cmd: dada_dbnull
+#    args: -k bada
   - name: dsaX_filTrigger
     cmd: /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/dsaX_filTrigger
     args: -c 27 -i 127.0.0.1 -n /home/ubuntu/data/fil -j eada -d 
@@ -35,7 +54,10 @@ routines:
       corr20: -b 192
   - name: dsaX_simplesplit
     cmd: /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/dsaX_simplesplit
-    args: -c 28 -i fada -o eada -j bada -b
+    args: -c 29 -i aada -o eada -j cada -b
+  - name: dsaX_simplesplit
+    cmd: /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/dsaX_simplesplit
+    args: -c 28 -i fada -o aada -j bada -b
   - name: gpu_flagger
     cmd: /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/gpu_flagger
     args: -i dada -o fada -t 4.5 -v
