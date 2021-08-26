@@ -6,7 +6,7 @@ buffers:
     c: 0
   - k: eada
     b: 1073741824
-    n: 16
+    n: 24
     c: 0
   - k: fada
     b: 1073741824
@@ -29,29 +29,26 @@ routines:
     cmd: /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/dsaX_writeFil
     args: -k cada -i 127.0.0.1 -m
     hostargs:
-      corr17: -f /home/ubuntu/data/corr17
-      corr18: -f /home/ubuntu/data/corr18
-      corr19: -f /home/ubuntu/data/corr19
-      corr20: -f /home/ubuntu/data/corr20
+      corr01: -f /home/ubuntu/data/corr01
+      corr02: -f /home/ubuntu/data/corr02
+      corr09: -f /home/ubuntu/data/corr09
+      corr13: -f /home/ubuntu/data/corr13
   - name: heimdall
     cmd: /home/ubuntu/proj/dsa110-shell/dsa110-mbheimdall/bin/heimdall
     args: -k bada -gpu_id 0 -nsamps_gulp 16384 -output_dir /home/ubuntu/data -dm 10 1100 -dm_tol 1.5 -max_giant_rate 20000000 -nbeams 64
     hostargs:
-      corr17: -coincidencer 10.41.0.69:12345 -beam 0
-      corr18: -coincidencer 10.41.0.69:12346 -beam 64
-      corr19: -coincidencer 10.41.0.69:12347 -beam 128
-      corr20: -coincidencer 10.41.0.69:12348 -beam 192
-#  - name: dada_dbnull
-#    cmd: dada_dbnull
-#    args: -k bada
+      corr01: -coincidencer 10.41.0.43:12345 -beam 0
+      corr02: -coincidencer 10.41.0.43:12346 -beam 64
+      corr09: -coincidencer 10.41.0.43:12347 -beam 128
+      corr13: -coincidencer 10.41.0.43:12348 -beam 192
   - name: dsaX_filTrigger
     cmd: /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/dsaX_filTrigger
     args: -c 27 -i 127.0.0.1 -n /home/ubuntu/data/fil -j eada -d 
     hostargs:
-      corr17: -b 0
-      corr18: -b 64
-      corr19: -b 128
-      corr20: -b 192
+      corr01: -b 0
+      corr02: -b 64
+      corr09: -b 128
+      corr13: -b 192
   - name: dsaX_simplesplit
     cmd: /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/dsaX_simplesplit
     args: -c 29 -i aada -o eada -j cada -b
@@ -60,18 +57,18 @@ routines:
     args: -c 28 -i fada -o aada -j bada -b
   - name: gpu_flagger
     cmd: /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/gpu_flagger
-    args: -i dada -o fada -t 4.5 -v
+    args: -i dada -o fada -t 4.5 -n 7
     hostargs:
-      corr17: -g /home/ubuntu/data/beams_corr17
-      corr18: -g /home/ubuntu/data/beams_corr18
-      corr19: -g /home/ubuntu/data/beams_corr19
-      corr20: -g /home/ubuntu/data/beams_corr20
+      corr01: -g /home/ubuntu/data/beams_corr01
+      corr02: -g /home/ubuntu/data/beams_corr02
+      corr09: -g /home/ubuntu/data/beams_corr09
+      corr13: -g /home/ubuntu/data/beams_corr13
   - name: dsaX_nicdb
     cmd: /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/dsaX_nicdb
     args: -f /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/spectrometer_header.txt -o dada 
     hostargs:
-      corr17: -i 10.41.0.101
-      corr18: -i 10.41.0.92
-      corr19: -i 10.41.0.103
-      corr20: -i 10.41.0.94
+      corr01: -i 10.41.0.114
+      corr02: -i 10.41.0.87
+      corr09: -i 10.41.0.66
+      corr13: -i 10.41.0.60
       
