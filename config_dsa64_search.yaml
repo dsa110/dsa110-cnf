@@ -6,7 +6,7 @@ buffers:
     c: 0
   - k: eada
     b: 1073741824
-    n: 24
+    n: 8
     c: 0
   - k: fada
     b: 1073741824
