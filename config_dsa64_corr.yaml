@@ -1,0 +1,112 @@
+# configuration for correlator and beamformer
+buffers:
+  - k: dada
+    b: 198180864
+    n: 50
+    c: 1
+    r: 3
+  - k: eada
+    b: 201326592
+    n: 12
+    c: 0
+  - k: fada
+    b: 51118080
+    n: 4
+    c: 1
+  - k: bada
+    b: 12779520
+    n: 40
+    c: 1
+  - k: cada
+    b: 6291456
+    n: 4
+    c: 1
+  - k: eaea
+    b: 198180864
+    n: 350
+  - k: fafa
+    b: 2972712960
+    n: 2
+    c: 1
+routines:
+  - name: dsaX_store
+    cmd: taskset --cpu-list 16 /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/dsaX_store
+    args: -c 16 -k fafa
+  - name: dsaX_trigger
+    cmd: taskset --cpu-list 15 /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/dsaX_trigger
+    args: -c 15 -i 127.0.0.1 -d -j eaea -o fafa -f 0.87
+  - name: meridian_fringestop
+    cmd: /home/ubuntu/anaconda3/envs/casa/bin/python
+    args: /home/ubuntu/proj/dsa110-shell/dsa110-meridian-fs/dsamfs/meridian_fringestop.py /home/ubuntu/data
+  - name: dsaX_dbnic
+    cmd: taskset --cpu-list 1 /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/dsaX_dbnic
+    args: -i cada -c 1
+    hostargs:
+      corr03: -g 0
+      corr04: -g 1
+      corr05: -g 2
+      corr06: -g 3
+      corr07: -g 4
+      corr08: -g 5
+      corr10: -g 6
+      corr11: -g 7
+      corr12: -g 8
+      corr14: -g 9
+      corr15: -g 10
+      corr16: -g 11
+      corr18: -g 12
+      corr19: -g 13
+      corr21: -g 14
+      corr22: -g 15
+  - name: dsaX_wrangle
+    cmd: taskset --cpu-list 3 /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/dsaX_wrangle
+    args: -i fada -o bada -c 3 -s
+  - name: dsaX_split
+    cmd: taskset --cpu-list 10-14  /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/dsaX_split
+    args: -i dada -o eaea -c 14 -m 
+  - name: dsaX_beamformer
+    cmd: taskset --cpu-list 2 /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/dsaX_beamformer
+    args: -c 2 -f /home/ubuntu/proj/dsa110-shell/dsa110-xengine/utils/antennas.out -a /home/ubuntu/proj/dsa110-shell/dsa110-xengine/scripts/flagants.dat -i dada -o cada 
+    hostargs:
+      corr03: -z 1498.75
+      corr04: -z 1487.03125
+      corr05: -z 1475.3125
+      corr06: -z 1463.59375
+      corr07: -z 1451.875
+      corr08: -z 1440.15625
+      corr10: -z 1428.4375
+      corr11: -z 1416.71875
+      corr12: -z 1405.0
+      corr14: -z 1393.28125
+      corr15: -z 1381.5625
+      corr16: -z 1369.84375
+      corr18: -z 1358.125
+      corr19: -z 1346.40625
+      corr21: -z 1334.6875
+      corr22: -z 1322.96875
+  - name: dsaX_xgpu
+    cmd: taskset --cpu-list 0 /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/dsaX_xgpu
+    args: -i eada -o fada -c 0
+  - name: dsaX_reorder_raw
+    cmd: taskset --cpu-list 4-9,20-29 /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/dsaX_reorder_raw
+    args: -t 16 -i dada -o eada -c 4
+  - name: dsaX_capture_manythread
+    cmd: taskset --cpu-list 17-19,30-39 /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/dsaX_capture_manythread
+    args: -c 38 -i 127.0.0.1 -o dada -f /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/correlator_header_dsaX.txt
+    hostargs:
+      corr03: -j 10.41.0.91
+      corr04: -j 10.41.0.117
+      corr05: -j 10.41.0.79
+      corr06: -j 10.41.0.58
+      corr07: -j 10.41.0.116
+      corr08: -j 10.41.0.99
+      corr10: -j 10.41.0.122
+      corr11: -j 10.41.0.121
+      corr12: -j 10.41.0.61
+      corr14: -j 10.41.0.115
+      corr15: -j 10.41.0.113
+      corr16: -j 10.41.0.83
+      corr18: -j 10.41.0.92
+      corr19: -j 10.41.0.103
+      corr21: -j 10.41.0.82
+      corr22: -j 10.41.0.71
