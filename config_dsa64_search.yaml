@@ -57,7 +57,7 @@ routines:
     args: -c 28 -i fada -o aada -j bada -b
   - name: gpu_flagger
     cmd: /home/ubuntu/proj/dsa110-shell/dsa110-xengine/src/gpu_flagger
-    args: -i dada -o fada -t 4.8 -n 7 -p -k 127.0.0.1
+    args: -i dada -o fada -t 4.8 -n 7 -p -k 127.0.0.1 -s 10.0
     hostargs:
       corr01: -g /home/ubuntu/data/beams_corr01
       corr02: -g /home/ubuntu/data/beams_corr02
