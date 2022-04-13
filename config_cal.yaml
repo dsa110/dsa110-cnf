@@ -1,0 +1,107 @@
+# Configuration for calibation (dsa110-calib)
+# Stored under the etcd key /cnf/cal
+antennas_in_ms:
+- '24'
+- '25'
+- '26'
+- '27'
+- '28'
+- '29'
+- '30'
+- '31'
+- '32'
+- '33'
+- '34'
+- '35'
+- '20'
+- '19'
+- '18'
+- '17'
+- '16'
+- '15'
+- '14'
+- '13'
+- '50'
+- '51'
+- '102'
+- '116'
+- '103'
+- '12'
+- '11'
+- '10'
+- '9'
+- '8'
+- '7'
+- '6'
+- '5'
+- '4'
+- '3'
+- '2'
+- '1'
+- '104'
+- '105'
+- '106'
+- '107'
+- '108'
+- '109'
+- '110'
+- '111'
+- '112'
+- '113'
+- '114'
+- '115'
+- '36'
+- '37'
+- '38'
+- '39'
+- '40'
+- '41'
+- '42'
+- '43'
+- '44'
+- '45'
+- '46'
+- '47'
+- '48'
+- '49'
+antennas_not_in_bf:
+- 102 A
+- 102 B
+- 116 A
+- 116 B
+- 103 A
+- 103 B
+- 104 A
+- 104 B
+- 105 A
+- 105 B
+- 106 A
+- 106 B
+- 107 A
+- 107 B
+- 108 A
+- 108 B
+- 109 A
+- 109 B
+- 110 A
+- 110 B
+- 111 A
+- 111 B
+- 112 A
+- 112 B
+- 113 A
+- 113 B
+- 114 A
+- 114 B
+- 115 A
+- 115 B
+beamformer_dir: /home/ubuntu/caldata/beamformer_weights/
+bfarchivedir: /mnt/data/dsa110/T3/calibs/
+caltable: /home/ubuntu/proj/dsa110-shell/dsa110-calib/dsacalib/data/calibrator_sources.csv
+caltime_minutes: 5
+flagfile: /home/ubuntu/proj/dsa110-shell/dsa110-xengine/scripts/flagants.dat
+hdf5_dir: /home/ubuntu/caldata/correlator/
+msdir: /home/ubuntu/caldata/calibration/
+refant:
+- '103'
+weightfile: /home/ubuntu/proj/dsa110-shell/dsa110-xengine/utils/antennas.out

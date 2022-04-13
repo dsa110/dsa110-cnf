@@ -1,0 +1,24 @@
+# Configuration for dsa110-meridian-fs
+# Stored under the etcd key /cnf/fringe
+filelength_minutes: 5
+fringestop: true
+fringestop_dsc: bool to enable fringestopping
+key_string: bada
+key_string_dsc: PSRDADA buffer name
+nfreq_int: 8
+nfreq_int_dsc: Number of channels to integrate
+nfreq_scrunch: 48
+nint: 24
+nint_dsc: Number of samples to integrate together
+outrigger_delays:
+  110: 222
+  113: 1394
+  114: 3514
+  115: 5070
+refmjd: 58849.0
+samples_per_frame: 1
+samples_per_frame_dsc: ''
+samples_per_frame_out: 1
+samples_per_frame_out_dsc: ''
+test: false
+test_dsc: Indicates testing

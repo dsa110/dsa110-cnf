@@ -1,0 +1,107 @@
+# Correlator setup parameters needed by various software components
+# Stored under the etcd key /cnf/corr
+antenna_order:
+  0: 24
+  1: 25
+  2: 26
+  3: 27
+  4: 28
+  5: 29
+  6: 30
+  7: 31
+  8: 32
+  9: 33
+  10: 34
+  11: 35
+  12: 20
+  13: 19
+  14: 18
+  15: 17
+  16: 16
+  17: 15
+  18: 14
+  19: 13
+  20: 50
+  21: 51
+  22: 102
+  23: 116
+  24: 103
+  25: 12
+  26: 11
+  27: 10
+  28: 9
+  29: 8
+  30: 7
+  31: 6
+  32: 5
+  33: 4
+  34: 3
+  35: 2
+  36: 1
+  37: 104
+  38: 105
+  39: 106
+  40: 107
+  41: 108
+  42: 109
+  43: 110
+  44: 111
+  45: 112
+  46: 113
+  47: 114
+  48: 44
+  49: 45
+  50: 46
+  51: 115
+  52: 36
+  53: 37
+  54: 38
+  55: 39
+  56: 40
+  57: 41
+  58: 42
+  59: 43
+  60: 47
+  61: 48
+  62: 49
+  63: 100
+antenna_order_dsc: antenna mapping
+bw_GHz: 0.25
+bw_GHz_dsc: Bandwidth
+ch0:
+  corr03: 1024
+  corr04: 1408
+  corr05: 1792
+  corr06: 2176
+  corr07: 2560
+  corr08: 2944
+  corr10: 3328
+  corr11: 3712
+  corr12: 4096
+  corr14: 4480
+  corr15: 4864
+  corr16: 5248
+  corr18: 5632
+  corr19: 6016
+  corr21: 6400
+  corr22: 6784
+chan_ascending: false
+chan_ascending_dsc: bool to specify channel order
+f0_GHz: 1.53
+f0_GHz_dsc: Frequency of the first channel before splitting into spws
+nant: 64
+nant_dsc: number of online antennas
+nchan: 8192
+nchan_dsc: Total number of channels before splitting into spws
+nchan_spw: 384
+nchan_spw_dsc: number of channels in a spectral window
+npol: 2
+npol_dsc: Number of polarizations
+pols_corr:
+- BB
+- AA
+pols_voltage:
+- B
+- A
+tsamp: 0.134217728
+tsamp_dsc: Sampling time of data that will be read in
