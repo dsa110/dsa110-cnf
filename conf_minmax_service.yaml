@@ -1,0 +1,5 @@
+# /cnf/minmax_service
+#
+mp_age_seconds:
+- 0
+- 120

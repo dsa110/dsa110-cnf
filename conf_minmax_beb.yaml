@@ -1,0 +1,29 @@
+# /cnf/minmax_beb
+#
+beb_current_a:
+- 270
+- 375
+beb_current_b:
+- 210
+- 325
+beb_temp:
+- 20
+- 45
+if_pwr_a:
+- -55
+- -38
+if_pwr_b:
+- -55
+- -38
+lo_mon:
+- 3
+- 4
+mp_age_seconds:
+- 0
+- 5
+pd_current_a:
+- 0.6
+- 3.0
+pd_current_b:
+- 0.6
+- 3.0

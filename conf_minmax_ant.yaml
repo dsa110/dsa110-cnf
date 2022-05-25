@@ -1,0 +1,80 @@
+# /cnf/minmax_ant
+#
+ant_cmd_el:
+- 0.0
+- 145.0
+ant_el:
+- 0.0
+- 145.0
+at_north_lim:
+- false
+- true
+at_south_lim:
+- false
+- true
+brake_on:
+- false
+- true
+drv_act:
+- 0
+- 2
+drv_cmd:
+- 0
+- 2
+drv_state:
+- 1
+- 2
+emergency_off:
+- false
+- true
+fan_err:
+- false
+- true
+feb_current_a:
+- 240.0
+- 300.0
+feb_current_b:
+- 240.0
+- 300.0
+feb_temp_a:
+- -10.0
+- 60.0
+feb_temp_b:
+- -10.0
+- 60.0
+focus_temp:
+- -10.0
+- 50.0
+laser_volts_a:
+- 2.5
+- 3.1
+laser_volts_b:
+- 2.5
+- 3.1
+lna_current_a:
+- 45.0
+- 85.0
+lna_current_b:
+- 45.0
+- 85.0
+motor_temp:
+- -10.0
+- 50.0
+mp_age_seconds:
+- 0
+- 5
+noise_a_on:
+- false
+- true
+noise_b_on:
+- false
+- true
+rf_pwr_a:
+- -80.0
+- -55.0
+rf_pwr_b:
+- -80.0
+- -55.0
+sim:
+- false
+- true
