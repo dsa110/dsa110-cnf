@@ -1,9 +1,13 @@
-min_dm: 100.0
+min_dm: 50.0
 min_dm_dsc: "smallest dm in filtering"
+min_snr: 8.0
+min_snr_dsc: "smallest snr in filtering"
+min_snr_wide: 9.0
+min_snr_wide_dsc: "smallest snr in filtering of wide events"
 max_ibox: 33
 max_ibox_dsc: "largest ibox in filtering"
-min_snr: 9.0
-min_snr_dsc: "smallest snr in filtering"
+wide_ibox: 17
+wide_ibox_dsc: "min_snr_wide used for ibox>=wide_ibox"
 max_ncl: 30
 max_ncl_dsc: "largest number of clusters allowed in triggering"
 max_ctb0: 7
