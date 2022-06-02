@@ -8,6 +8,8 @@ my_ds = ds.DsaStore()
 
 # first argument is key, second argument is file
 key = sys.argv[1]
+assert '/cnf' in key, "key should be full path (/cnf/<key>)"
+
 if len(sys.argv) == 3:
     print(f"Pushing {sys.argv[2]} to {key}...")
     fl = sys.argv[2]
