@@ -10,7 +10,7 @@ fl = sys.argv[2]
 # read file
 with open(fl, 'r') as stream:
     try:
-        dct = yaml.load(stream)
+        dct = yaml.load(stream, Loader=yaml.FullLoader)
     except yaml.YAMLError as exc:
         print('cannot open yaml file')
         exit(1)
