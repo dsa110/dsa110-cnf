@@ -1,8 +1,8 @@
 min_dm: 50.0
 min_dm_dsc: "smallest dm in filtering"
-min_snr: 8.0
+min_snr: 8.4
 min_snr_dsc: "smallest snr in filtering"
-min_snr_wide: 9.0
+min_snr_wide: 9.8
 min_snr_wide_dsc: "smallest snr in filtering of wide events"
 max_ibox: 33
 max_ibox_dsc: "largest ibox in filtering"
@@ -16,3 +16,5 @@ max_ctb: 15
 max_ctb_dsc: "maximum number of beams in cluster at high SNR"
 min_snr_t2out: 7.5
 min_snr_t2out_dsc: "min SNR in T2 out"
+use_gal_dm: 1
+use_gal_dm_dsc: "boolean for use of gal dm"
